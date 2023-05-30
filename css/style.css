@@ -1,0 +1,93 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.wrapper{
+    margin-right: 3px;
+    display:block;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    background-color:#fff;
+    color:#000;
+    line-height: 6vh;
+    
+
+}
+ a.introduction{
+    color: #87ceeb;
+    text-decoration: none;
+}
+.navbar{
+    
+    display: grid;
+    grid-column: 4%;
+    width: 300px;
+    background-color:#040720;
+   
+    height: 100%;
+    min-height: 900px;
+    position: fixed;
+    
+
+}
+h2 li button{
+    background-color: #040720;
+}
+h2 li button .sub-topic{
+    color: white;
+    font-size: medium;
+}
+
+
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+li option{
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: rgba;
+
+}
+
+    
+button{
+    
+    text-align: center;
+    line-height: 40px;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+   
+
+}
+button .sub-topic{
+    text-decoration: none;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    
+    width: calc(100%-320px);
+    margin-left: 350px;
+    margin-right: 100px;
+}
+img{
+    height: 300px;
+    width: 600px;
+
+}
+
+.typography{
+    height: 500px;
+    width: 1000px;
+}
+
+

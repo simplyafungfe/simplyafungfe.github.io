@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <!--navbar-->
+        <div class="navbar">
+            <ul>
+                <li> <a href="#Definition" class="introduction"> What  is CSS?</a></li>
+                <li><a href="#usage" class="introduction"> What can it used for?</a></li>
+                <h2><li><button value="Box-Model" >
+                        <a class="sub-topic" href="#Box-Model">Box-Model</a>
+                    </button>
+                    </li>
+                    <li><button value="Selectors" >
+                        <a  class="sub-topic"href="#selectors">Selectors</a>
+                    </button></li>
+                    <li><button value="#Typography" >
+                        <a  class="sub-topic" href="#Typography">Typography</a>
+                    </button></li>
+                    <li><button value="Layout" >
+                        <a  class="sub-topic" href="#Layout">Layout</a>
+                    </button></li>
+                    <li><button value="Responsive transitionand design" >
+                        <a  class="sub-topic" href="#responsive design">Responsive designs</a>
+                    </button></li>
+                    <li><button value="CSS Animation " >
+                        <a  class="sub-topic" href="#Animation">CSS Animation and Design</a>
+                    </button></li>
+                    <li><button value="Preprocessors" >
+                        <a  class="sub-topic" href="#Preprocessors">Preprocessors</a>
+                    </button></li>
+                    <li><button value="css-framworks" >
+                        <a  class="sub-topic" href="#css-frameworks">CSS Frameworks</a>
+                    </button></li>
+                    <li><button value="grid" >
+                        <a  class="sub-topic" href="#grid"> CSS Grid</a>
+                    </button></li>
+                    <li><button value="Variables" >
+                        <a  class="sub-topic"href="#Variables">CSS Variables</a>
+                    </button></li></h2>
+            </select></li>
+
+
+            </ul>
+        </div>
+
+        <!-- content -->
+       <section class="content">
+
+    
+        <div class="notes" id="Definition">
+            <h2> Introduction to CSS</h2>
+            <p> 
+                Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page. It describes how a webpage should look: it prescribes colors, fonts, spacing, and much more. In short, you can make your website look however you want. CSS lets developers and designers define how it behaves, including how elements are positioned in the browser.
+
+             While html uses tags, css uses rulesets. CSS is easy to learn and understand, but it provides powerful control over the presentation of an HTML document.
+            </p>
+           <h2 id="usage">What can it be used for?</h2>
+            <p>
+              CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+            </p>
+            <h3>
+                How does CSS work?
+            </h3>
+            <p>
+               
+                To understand the basics of how CSS works, you must first understand a little about modern HTML. Web developers lay out pages according to the "box model." A Web page is a series of boxes, each containing a discrete element. These boxes are nested, one inside another.
+
+                For example, a page's header is a box, and it contains several smaller boxes comprising all the elements that make up a header: logo, navigation, social media buttons, shopping cart buttons, etc. Using CSS, a developer assigns styles to the "header" box. In this example, let's assume that the developer makes the text inside the header purple, Arial font and fifteen points high.
+
+                Here's where the "cascading" part of cascading style sheets comes into play. The font styles applied to the header cascade down to all the elements contained inside the header. Elements containing text such as navigation, links or calls to action will all be purple, Arial and fifteen points high.
+            </p>
+
+            <!--the box model-->
+
+            <h2 id="Box-Model">Box-Model</h2>
+
+                
+                The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. According to the CSS box model, the web browser supplies each element as a square prism.
+
+                The following diagram illustrates the box model. 
+                <img src="/Task1/box model.png" alt="">
+
+
+                   When displaying a document on a browser, the elements are displayed as rectangular containers according to the standard CSS box model. Each box will consist of a content area and, optionally, padding, border, and margin:
+
+                   <ol><strong>
+                    <li>Content : The actual place wheer the "content" goes</li>
+                    <li>Borde : The line that wraps the content</li>
+                    <li>Padding : The space between the content are and the inner edge of the border</li>
+                    <li>Margin : The space between th element</li>
+                    
+                   </ol></strong>
+                    We can use CSS properties to style each of the parts:
+
+                    <p>For the content, we can specify width and height.
+                    The paddings thickness can be specified with the padding shorthand or with each separate side property (e.g. padding-top, padding-right, etc.)
+                    The border can take many properties, but the most important for this case would be thickness (border-width), type (border-style), and color (border-color). A shorthand version can be used, as well as individual side property.
+                    The margin works similarly to the padding, and its thickness can be specified with the margin shorthand or with each separate side property (e.g. margin-top, margin-bottom, etc.)
+                    As displayed in the figure above, each of these parts of the box model generates an area of its own, so we have one for the content, padding, border, and margin. Let's see them one by one.</p>
+
+                    <h4>The boxes</h4>
+                    Although the content-box and the border-box may get most of the attention (thanks box-sizing!), all of the areas/boxes in the box model have something that makes them particular and important.
+
+                    <h4>Content box</h4>
+                    The content area (or content box) is the place where the actual content of the element goes. By default, the sizes apply to the content area: when width and height are specified for an element, they do not include padding, border, or margin.
+
+                    The CSS property <h5>box-sizing</h5> allows us to specify a different way of calculating the sizes. If we specify <h5>border-box</h5>, then the size will represent the total of content, padding, and border added together.
+
+                    Content Box description
+
+                    <h4>Padding box</h4>
+                    The padding area (or padding box) extends between the outer edges of the padding, including the content area. If the padding is zero, the padding and the content box will be the same.
+
+                    It is important because the background will be applied using the<h5> padding-box</h5> as a reference. For example, when we specify top left as the position of the background (default value), we are referring to the top left of the padding-box, not the content or the border boxes.
+
+                    Padding Box Description
+
+                    <h4>Border box</h4>
+                    The border area (or border box) extends between the outer edges of the border, including the padding and the content. If the border is zero, the border and padding boxes will be the same.
+                    Apart from having the possibility of specifying the size of the element based on the border-box instead of the content-box, the border-box is essential because it is used as the starting point for other properties (see beyond the box model below).
+
+                        Border Box Description
+
+                        Margin box
+                        The margin area (or margin box) extends between the outer edges of the element's margins, including all margin, border, padding, and content. If the margin is zero, the margin and border boxes will be the same.
+
+                        The outer edge of the margin box or simply "outer edge" because it is the edge the element and the whole box– is important because it is used as the positioning reference (e.g. the top value refers to the position of the top outer edge).
+
+                        Margin Box Description
+
+                        Beyond the box model
+                        In addition to margin, padding, and border, there are a couple of CSS properties that, in my opinion, should be included when talking about the box model: box-shadow and outline.
+
+                        Neither of them occupies space within the box, but they are visible, they are boxes, and their positioning/size highly depend on the specific areas from the box-model.
+
+                        Outline
+                        Outlines are very similar to borders.The syntax is the same, but there are a couple of differences: they don't occupy space and they are squared –(even when they don't have to according to the specs.)
+
+                        The outline is placed starting in the border edge (the outer edge of the border) and towards the outside. Their position can be adjusted by using the outline-offset property. so they could be on the outside or the inside.
+
+                        Different positions of the outline using outline-offset: value = 0 means the outline will be right outside the border edge, touching it; value &gt; 0 means the outline will be outside of the border 
+
+                        Outline (dashed blue) position relative to the border (solid black) depending on the `outline-offset` value
+                        Browsers use the outline to highlight the focused element. This is interesting because, even when the outline doesn't occupy any space, it is displayed on top of the box model elements (even the content!). So be cautious when using outline-offset.
+
+                        Box-shadow
+                        The box-shadow property adds a shadow effect to an element. This shadow is a box in itself –although it doesn't occupy any space–, and contrary to the outline's behavior, it goes under the content/elements in the box model instead of on top.
+
+                        The visualization of the box-shadow is also interesting because it will start from the border, but which edge of the border depends on the type of shadow: drop shadows (default) grow from the border edge (the outer edge of the border), while inset shadows grow from the padding edge (the inner edge of the border).
+            
+                <h2 id="selectors">
+                    <strong>The Selectors</strong></h2>
+
+                    <p>
+                        With the knowlegde of CSS, we move over to the selector. <b>Selectors</b> is the first part of the css rule.
+                        It is the pattern of element that tells the browser which HTML element should be selected to have the CCS property inside the rule applied to them.
+                        This pattern may range from simple element name to rich contextual pattern.
+                        <h3>TYpes of selectors</h3>
+                        
+                      
+                           <p>consider the HTML code below</p>
+                            <img src="/Task1/examples of selectors.jpg" alt="">
+                              
+                            <p>
+                                selecting a class and an id will give;
+                            </p>
+                            <img src="/Task1/class selectors.jpg" alt="">
+                        
+                        
+                        
+                              
+
+                           
+                            <h4>Class Selectors</h4>
+                            The class selector selects elements with a specific class attribute. To select elements with a specific class, write a period <strong>(.)</strong> character, followed by the name of the class.
+                            
+                            <h4>Id Selector</h4>
+                            The element selector selects elements based on the element name.
+
+                            
+                            The id selector uses the id attribute of an HTML element to select a specific element. The id of an element should be unique within a page, so the id selector is used to select one unique element. To select an element with a specific id, write a hash (#) character, followed by the id of the element.
+                            </p>
+                            <h4> Grouping Selectors</h4>
+                            If you have elements with the same style definitions, it will be better to group the selectors to minimize the code. To group selectors, separate each selector with a comma.
+
+                            Here we have some elements like <b>h1, h2, and p.</b> We set some properties for them at a time by grouping them.
+
+                            <h4> Pseudo Selector</h4>
+                            <p>
+                                Pseudo-class selectors select elements by psuedo-class. It is commonly combined with element selectors, such as input:enabled.
+                                A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). 
+                                For example, the pseudo-class <b>": hover"</b> can be used to select a button when a user's pointer hovers over the button and this selected button can then be styled.
+                                Some pseudo class selectors:
+                            </p>
+                            <img src="/Task1/pseudo.jpg" alt="">
+
+                            <h4>Global Selectors</h4>
+                            <p>The global selector uses an * (asterisk). It selects all elements.</p>
+                            
+                        </p>
+
+
+                        <!--Typography-->
+
+                <h2 id="Typography"><strong> Typography in CSS</strong></h2>
+                <p>
+                    Typography is all about style, proportions, and spacing. Good typography is not only imperative for aesthetic appeal, 
+                    but it also improves site usability when text legibility and readability concepts are applied.
+                    <h4>
+                        Properties of Typography
+                        
+                    </h4>
+                    <p>The CSS properties that allow you to define the color, size, spacing, and shape of text</p>
+                    <img  class='typography' src="/Task1/color typography.jpg" alt="">
+                    <img class='typography'src="/Task1/font typography.jpg" alt="">
+                    <img class='typography' src="/Task1/font size typography.jpg" alt="">
+                    <img src="/Task1/letter spacing.jpg" alt="" class="typography">
+                    <img src="/Task1/text align.jpg" alt="" class="typography">
+                    <img src="/Task1/text decoratiion.jpg" alt="" class="typography">
+                </p>
+
+                <h2 id="Layout"><strong> CSS Layout</strong></h2>
+                <p>
+
+                    <h3>
+                        Types of CSS Layout.
+                    </h3>
+                    <p><h4> Flexbox Layout</h4></p>
+                    This is a single-axis–oriented layout system, a flex container is the box generated by an element with a computed <b>display of flex or inline-flex.</b> In-flow children of a flex container are called flex items and are laid out using the flex layout model.
+
+                    In the flex layout model, the children of a flex container can be laid out in any direction <u>(exposed through the flex-direction, flex-wrap, and order properties), and can “flex” their sizes (flex-grow, flex-shrink, flex-basis)</u>, 
+                    either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated<u> (justify-content, align-items, align-content).</u>
+                    For more info visit <a href="https://www.w3.org/TR/css-flexbox-1/" target="_blank" rel="nofollow noopener noreferrer">CSS Flexible Box Layout Module Level 1</a>
+                    
+                    <p><h4>Float Layout</h4></p>
+                    Floats have commonly been used to create entire web site layouts featuring multiple columns of information floated so they sit alongside one another.
+                    There are newer, better layout techniques available and so use of floats in this way should be regarded as a legacy technique.
+
+                    This layout uses two CSS properties: <b>float and clear:</b>
+
+                    <p>
+                        <b style="text-decoration: underline;">Float</b> : When an element is floated, it is taken out of the normal flow of the document (though still remaining part of it).
+                         It is shifted to the left, or right, until it touches the edge of its containing box, or another floated element.<br>
+                        <b style="text-decoration: underline;">Clear</b>: sets whether an element must be moved below (cleared) floating elements that precede it, applies to floating and non-floating elements.
+                        As float implies the use of the block layout, it modifies the computed value of the display values
+                    
+                    </p>
+                        More info: <a href="https://css-tricks.com/all-about-floats/" target="_blank" rel="nofollow noopener noreferrer">All About Floats</a>
+                    
+                        <p><h4>Grid Layout</h4></p>
+                        This is a two-dimensional grid-based layout system, a grid container is the box generated by an element with a computed display of <b>grid or inline-grid</b>, the children of a grid container can be positioned into arbitrary slots in a
+                        predefined flexible or fixed-size layout grid.
+
+                        You can define columns and rows on your grid using the <b>grid-template-rows and grid-template-columns properties.
+                        </b>
+                        Loosely speaking, the grid items of a grid container are boxes representing its in-flow contents. A grid container’s child elements could position themselves so they actually overlap and layer, 
+                        similar to CSS positioned elements.
+                                        </p>   
+                </p>
+
+                <h2 id="responsive design"><strong>Responsive Transition and Design</strong></h2>
+                <p>
+                    When we talk about responsive design,  we are referring to the idea that a website should be displayed as well on a PC screen as on a smartphone screen or on any type of device.
+                    Today, we can mainly use three methods to meet the challenges brought by different screen sizes. We can :
+                    <ul class="design">
+                        <li>Create a dedicated application for mobiles;</li>
+                        <li>Create a "mobile copy" of our site using Google's AMP ("Accelerated Mobile Pages") initiative;</li>
+                        <li>Use Media Queries or media queries</li>
+                    </ul>
+
+                    <p>The basic idea of ​​responsive design is that a website should present the same information regardless of the device that displays it, rearranging it to maintain the best possible ergonomics. 
+                        We will be able to complete this by using the Media Queries which will therefore be the central notion of this part.
+                    </p>
+                </p>
+
+                <h2 id="Animation"><strong>CSS Transition and Animation</strong></h2>
+                <p>
+                    A CSS transition allows you to change the property values of an element over a given duration that you set. To create a transition you must first identify which CSS property you want to add an effect to and then specify the duration of the effect. 
+                    If no duration is set, the transition will not occur.
+                </p>
+                <p>There are four transition properties:</p>
+                <p><strong>transition-delay </strong>– specifies the delay, in seconds (s), you would like to assign your transition effect.</p>
+                <p><strong>transition-duration – </strong> the duration, in seconds (s) or milliseconds (ms), you would like to assign your transition effect.</p>
+                <p><strong>transition-property </strong>– specifies the name of the CSS property your transition effect is meant for.</p>
+                <p><strong>transition-timing-function –</strong> Specifies the speed curve of the transition effect. Meaning, the type of speed variation you want to select for your transition effect. There is no “fast” or “slow” options. Instead there are speed curve options that go from one speed to another. Such as “ease” which tells your effect to start slow, then go fast, then end slowly.</p>
+                
+                <p>To create a transition you only need to change one of these properties over the duration you choose. However, it is possible to change more than one property at the same time; resulting in more dramatic transitions. </p>
+                
+
+                <p><h3> CSS Animation</h3></p>
+                <p>Where CSS transitions are all about altering element properties as they move from state to state, CSS animations are dependent on keyframes and animation properties.</p>
+                <p><strong>keyframes</strong> – keyframes are used to define the styles an element will have at various times.</p>
+                <p><strong>animation properties</strong> – animation properties are used to assign @keyframes to a specific element and determine how it is animated. </p>
+                <p>There are eight animation properties:</p>
+                <p><strong>animation-delay</strong> – specifies a delay for the start of an animation.</p>
+                <p><strong>animation-direction</strong> – specifies whether an animation should play in reverse direction or alternate cycles.</p>
+                <p><strong>animation-duration</strong> – specifies how many seconds or milliseconds an animation takes to complete one cycle.</p>
+                <p><strong>animation-fill-mode</strong> – specifies a style for the element when the animation is not playing. Such as when it is finished or when it has a delay.</p>
+                <p><strong>animation-iteration-count</strong> – specifies the number of times an animation should be played.</p>
+                <p><strong>animation-iteration-count</strong> – specifies the number of times an animation should be played.</p>
+                <p><strong>animation-timing-function</strong> – specifies the speed curve of the animation.</p>
+                <p>The examples below will show you how these things are used together in various ways. Once you understand the relationships between them you’ll be able to figure out all kinds of interesting ways to use them.</p>
+
+
+
+
+                <h2 id="Preprocessors">What is a CSS Preprocessor?</h2>
+                <p>A CSS preprocessor is a scripting language that extends CSS and is compiled into regular CSS syntax. 
+                    A browser can only understand CSS, which at times may not be enough to write clean and reusable rules. Using only CSS, the designer/developer is not able to reuse a collection of rules in multiple selectors which had unclear pieces of data across a stylesheet.
+                    To overcome most of these limitations, the concept of a preprocessor was created. 
+                    It offered an advanced way of writing CSS that extends the basic functionalities. 
+                    This advanced code is later compiled as normal CSS code that the browser will understand.</p>
+                    <h2>5 Reasons to use a CSS Preprocessor</h2>
+
+                    <ol><li><b>It will make your code easier to maintain</b> You will be able to create variables, mixins and functions that are declared at the beginning of the document which will make simple changes, like a color, easier to maintain. For example, you declare a variable for your primary color and secondary color:<pre>$primary_color: #346699; 
+                        $secondary_color: #769bc0;</pre>And then you can use it like this:<pre>a{color: $primary_color;}
+                        nav{background-color: $secondary-color;}</pre>Which will output the CSS as:<pre>a{color: #346699;}
+                        nav{background-color:#769bc0;}</pre>So now, if you want to change the primary color to orange, you would only have to change the color declared in the variable and the preprocessor will automatically change all instances of that color outputted to the CSS.</li><li><b>It will make your CSS DRY</b> DRY as in <i>Don’t repeat yourself</i> (as opposed to WET, <i>Write everything twice</i>). Don’t repeat yourself is a main principle of computer programming. How often have you written something like this in CSS?<pre>.main-heading{</pre><p class="code-indent">font-family: Tahoma, Geneva, sans-serif; font-weight: bold; font-size:20px; text-transform: uppercase; color: blue;</p><pre>}
+                        
+                        .secondary-heading{</pre><p class="code-indent">font-family: Tahoma, Geneva, sans-serif; font-weight: bold; font-size:16px; text-transform: uppercase; color: blue;</p><pre>}
+                        </pre>Written in SCSS:<pre>.main-heading{</pre><p class="code-indent">font-family: Tahoma, Geneva, sans-serif; font-weight: bold; font-size:20px; text-transform: uppercase; color: blue;</p><pre>}
+                        
+                        .secondary-heading{</pre><p class="code-indent">@extend .main-heading; font-size:16px;</p><pre>}
+                        </pre>Using @extend in SCSS will share a set of CSS properties from one select to another. It helps keep your SCSS very DRY.</li><li><b>It will make your CSS more organized</b> Both Sass and LESS support nested definitions. This is an excellent feature and keeps things organized. After you start writing your css definitions this way, you will realize how repetitive the old way was. Consider the following example:<pre>h2{</pre><p class="code-indent" style="margin-bottom: 0;">font-family:Helvetica, Arial, sans-serif; font-size:20px; text-transform:uppercase; a { <span class="code-indent">color:blue;</span> } &amp;:hover{ <span class="code-indent">text-decoration:underline;</span> <span class="code-indent">color:green;</span> }</p><pre>	
+                        }</pre>Which just makes more sense than this:<pre>h2 {</pre><p class="code-indent">font-family: Helvetica, Arial, sans-serif; font-size: 20px; text-transform: uppercase;</p><pre>}
+                        
+                        h2 a {</pre><p class="code-indent">color: blue;</p><pre>}
+                        
+                        h2 a:hover {</pre><p class="code-indent">text-decoration: underline; color: green;</p><pre>}
+                        </pre></li><li><b> It will save you time.</b> You will be impressed at how much time you will save when you aren’t forced to write the same code over and over again. We can all use a little more free time.</li><li><b>It’s fun!</b> Really, go try it out! See which one is your favorite.</li></ol>
+                        
+
+                        <h2 id="css-frameworks"><strong>
+                            CSS framework
+                        </strong></h2>
+                        <p>
+                            CSS framew orks are tools used by UI developers to make their job easier. Rather than reinventing the wheel each time a new project comes up; frameworks give developers the tools to quickly spin-up user interfaces that can be tweaked and iterated on throughout a project instead of spending time starting from a blank document. They’re also useful in large teams and help those of us that need to create a theme for use in more than one project. 
+                            Oftentimes, however, CSS framework websites are a little ambiguous to complete beginners, filled with buzzwords and descriptions that only more senior developers will catch onto, and it’s difficult for beginners to tell when and which framework they should start learning.
+                        </p>
+                        <p>
+                            In its simplest form, a CSS framework is a collection of CSS stylesheets that are prepped and ready to use. They’re tailored for use in common situations, like setting up navbars, and are often expanded upon by other technologies such as SASS and JavaScript. Think of it like a colleague giving you a completed CSS stylesheet for a home page you’re setting up. Basically, all you need to do is writeup your HTML with the appropriate structure, classes, and IDs and you’re off to the races. However, instead of that stylesheet being specifically for the home page you’re working on, it’s ready to accommodate a general “standard” of home page, having classes for things commonly found on other home pages (ie navbar, footer, slider, hamburger menu, 3 column layout).
+                            This allows you to quickly setup web pages without having to deep dive into some CSS, saving a bunch of time.
+                        </p>
+                        <p>
+                            Time savings aren’t the only benefit gained by using CSS frameworks. Teams with multiple developers, especially larger ones, can really appreciate the standards that frameworks bring to the table. 
+                            Instead of each developer bringing their own flavor of class names to a project, frameworks standardize layouts and allow one developer to easily read another developer’s code.  
+                            This saves time, but also allows for a smoother development cycle with less bugs, and easier team communication. If you’ve ever been thrown into the deep end of a nearly complete project and told to fix up the UI, you know the pain that frameworks can alleviate.
+                        </p>
+                        <p>
+                            It is important to remember that jumping right into a framework as a newbie isn’t recommended. Sometimes folks just want to get started as quickly as they can, and they see frameworks as a way to jump start their goals. While that’s true for spinning up projects, it can be harmful to your long-term career as you’d be missing out on learning the basic skills that can be applied across the board.
+                        </p>
+
+                        <!--grid-->
+                        <h2 id="grid"><strong>CSS Grid</strong></h2>
+                        <p>
+                            CSS Grid is a powerful tool that allows for two-dimensional layouts to be created on the web.
+                        </p>
+                        <p>
+                            <h3><strong>What is CSS Grid used for?</strong></h3>
+                            CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives. Like tables, grid layout enables an author to align elements into columns and rows.
+                        </p><p>
+                            To get started you have to define a container element as a grid with <strong>display: grid</strong>, 
+                            set the column and row sizes with <strong>grid-template-columns</strong> and <strong>grid-template-rows</strong>, 
+                            and then place its child elements into the grid with <strong>grid-column</strong> and <strong>grid-row</strong>. 
+                            Similarly to flexbox, the source order of the grid items doesn’t matter. 
+                            Your CSS can place them in any order, which makes it super easy to rearrange your grid with media queries. 
+                            Imagine defining the layout of your entire page, and then completely rearranging it to accommodate a different screen width all with only a couple lines of CSS. Grid is one of the most powerful CSS modules ever introduced.
+                        </p>
+
+                        <!--variablees-->
+
+                        <h2 id="Variables"><strong> CSS variable</strong></h2>
+                        <p>
+                            The var() function is used to insert the value of a CSS variable.
+
+                            CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+                            
+                            A good way to use CSS variables is when it comes to the colors of your design. 
+                            Instead of copy and paste the same colors over and over again, you can place them in variables.
+                        </p>
+                        <p>
+                            <p><strong>What can I store in CSS variable?</strong></p>
+                            CSS variables are custom properties in which you can store a value and use it anywhere in the HTML code.
+                                                    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+           
+        
+       </section>
+    </div>
+    <script type="text/javascript" src="code.js"></script>
+</body>
+</html>
